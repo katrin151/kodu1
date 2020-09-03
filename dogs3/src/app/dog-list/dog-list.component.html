@@ -1,0 +1,6 @@
+<p>dog-list works!</p>
+<div *ngFor="let dog of dogs; let i = index" [routerLink]="['dog',i]">
+    {{ dog.name }} <br>
+    <img src="{{ dog.picture }}"> <br>
+  </div>
+
