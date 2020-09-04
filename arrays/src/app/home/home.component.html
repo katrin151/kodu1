@@ -1,0 +1,10 @@
+
+<button (click)="onRemoveAll()" >Tühjenda</button>
+
+<div *ngFor ="let human of humans; let i=index"  >
+    
+    {{ human.firstname }} {{ human.lastname }}
+
+    <button (click)="onRemoveOne(i)">X</button>
+
+</div>
