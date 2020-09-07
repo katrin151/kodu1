@@ -1,8 +1,10 @@
 
 <button (click)="onRemoveAll()" >Tühjenda</button>
 
-<div *ngFor ="let human of humans; let i=index"  >
+<div *ngFor ="let human of humans; let i=index" [routerLink]="['human',i]" >
     
+    <button (click)="onGetOne(i)">vaata</button>
+
     {{ human.firstname }} {{ human.lastname }}
 
     <button (click)="onRemoveOne(i)">X</button>
