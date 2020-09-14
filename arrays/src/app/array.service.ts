@@ -1,41 +1,41 @@
 import { Injectable } from '@angular/core';
-
+import { Person } from "./person.model";
 @Injectable({
   providedIn: 'root'
 })
 export class ArrayService {
   people = [
-    { firstname: "Anna", lastname: "Annik", age: 21, address: "Estonia"},
-    { firstname: "Birgit", lastname: "Beež", age: 19, address: "Latvia"},
-    { firstname: "Carolin", lastname: "Cipris", age: 18, address: "Estonia"},
-    { firstname: "Diana", lastname: "Diivan", age: 25, address: "Estonia"},
-    { firstname: "Eduard", lastname: "Ernsto", age: 29, address: "Estonia"},
-    { firstname: "Friedrich", lastname: "Faust", age: 23, address: "Estonia"},
-    { firstname: "Gustav", lastname: "Gross", age: 32, address: "Estonia"},
-    { firstname: "Harri", lastname: "Hoop", age: 21, address: "Estonia"},
-    { firstname: "Ilmar", lastname: "Iisak", age: 25, address: "Estonia"},
-    { firstname: "Joonas", lastname: "Jutt", age: 26, address: "Latvia"},
+    { firstName: "Anna", lastName: "Annik", age: 21, address: "Estonia"},
+    { firstName: "Birgit", lastName: "Beež", age: 19, address: "Latvia"},
+    { firstName: "Carolin", lastName: "Cipris", age: 18, address: "Estonia"},
+    { firstName: "Diana", lastName: "Diivan", age: 25, address: "Estonia"},
+    { firstName: "Eduard", lastName: "Ernsto", age: 29, address: "Estonia"},
+    { firstName: "Friedrich", lastName: "Faust", age: 23, address: "Estonia"},
+    { firstName: "Gustav", lastName: "Gross", age: 32, address: "Estonia"},
+    { firstName: "Harri", lastName: "Hoop", age: 21, address: "Estonia"},
+    { firstName: "Ilmar", lastName: "Iisak", age: 25, address: "Estonia"},
+    { firstName: "Joonas", lastName: "Jutt", age: 26, address: "Latvia"},
   ]
 
   constructor() { }
 
-  removeAll() {
+  removeAll(): void {
     this.people = [];
     }
 
-  removeOne(index) {
+  removeOne(index: number): void {
     this.people.splice(index,1);
     }
 
-  addOne(human) {
+  addOne(human: Person): void {
     this.people.push(human);
     }
 
-  getOne(index) {
+  getOne(index: number): Person {
     return this.people[index];
     }
 
-  getAll() {
+  getAll(): Person[] {
     return this.people.slice();
     }
 
