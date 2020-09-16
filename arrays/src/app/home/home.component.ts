@@ -7,6 +7,7 @@ import { Person } from "./../person.model";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
   humans: Person[];
 
@@ -31,12 +32,12 @@ export class HomeComponent implements OnInit {
     this.humans = this.arrayService.getAll();
   }
 
-  onGetOne(i: number) {
+  onGetOne(i: number): void {
     this.arrayService.getOne(i);
     this.humans = this.arrayService.getAll();
   }
 
-  onGetAll() {
+  onGetAll(): void {
     this.arrayService.getAll();
     this.humans = this.arrayService.getAll();
   }
