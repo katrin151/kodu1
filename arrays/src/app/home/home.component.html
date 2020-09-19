@@ -5,4 +5,5 @@
     <button (click)="onGetOne(i)">vaata</button>
     {{ human.firstName }} {{ human.lastName }}
     <button (click)="onRemoveOne(i)">X</button>
+    <button [routerLink]="['edit', i]">Muuda</button>
 </div>

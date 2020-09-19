@@ -38,5 +38,8 @@ export class ArrayService {
   getAll(): Person[] {
     return this.people.slice();
     }
-
+    
+  editHuman(human: Person, index: number) {
+    this.people[index] = human;
+  }
 }

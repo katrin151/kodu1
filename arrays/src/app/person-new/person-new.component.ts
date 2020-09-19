@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArrayService } from '../array.service';
-import { NgForm } from '@angular/forms';
+import { FormGroup, NgForm } from '@angular/forms';
 import { Person } from '../person.model';
 import { Router } from '@angular/router';
 

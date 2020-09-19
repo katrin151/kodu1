@@ -1,0 +1,9 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="editHumanForm">
+    <input formControlName="firstName" type="text" required><br>
+    <input formControlName="lastName" type="text" required><br>
+    <input formControlName="age" type="text" required><br>
+    <input formControlName="address" type="text" required><br>
+    <button type="submit" [disabled]="!editHumanForm.valid">
+        Muuda
+    </button>
+</form>
